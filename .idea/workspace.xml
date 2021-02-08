@@ -1,15 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="857fd052-2148-45c4-9fbd-33dda9204e50" name="Default Changelist" comment="Security implemented">
-      <change beforePath="$PROJECT_DIR$/.idea/recette.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/recette.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Migrations/Version20200217200408.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Migrations/Version20200219165825.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Migrations/Version20200220094258.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Migrations/Version20200220163020.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Migrations/Version20200220173825.php" beforeDir="false" />
-    </list>
+    <list default="true" id="857fd052-2148-45c4-9fbd-33dda9204e50" name="Default Changelist" comment="Security implemented" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -208,7 +200,7 @@
       <workItem from="1582148429916" duration="1952000" />
       <workItem from="1582188229303" duration="7403000" />
       <workItem from="1582196647744" duration="15649000" />
-      <workItem from="1612780311394" duration="705000" />
+      <workItem from="1612780311394" duration="805000" />
     </task>
     <task id="LOCAL-00001" summary="First commit">
       <created>1581975275305</created>
