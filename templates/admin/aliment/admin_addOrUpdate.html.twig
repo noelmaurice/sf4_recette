@@ -1,0 +1,39 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Modification{% endblock %}
+
+{% form_theme form 'bootstrap_4_layout.html.twig' %}
+
+{% block monTitre %}
+    {% if isModification %}
+        Modification de l'aliment {{aliment.nom}}
+    {% else %}
+        Ajout d'un aliment
+    {% endif %}
+{% endblock %}
+{% block body %}
+
+    {{form_start(form)}}
+
+    <div class="row">
+        <div class="col-6">
+            {% if isModification %}
+                <img src="{{asset('images/aliments/' ~ aliment.image )}}" style="width:25%">
+            {% endif %}
+            <div>{{ form_row(form.nom, {"attr" : { "placeholder": "Nom de l'aliment" }}) }}</div>
+            <div>{{ form_row(form.type, {"attr" : { "placeholder": "Type de l'aliment" }}) }}</div>
+            <div>{{ form_row(form.imageFile, {"attr" : { "placeholder": "Image de l'aliment" }}) }}</div>
+        </div>
+        <div class="col-6">
+            <div>{{ form_row(form.prix, {"attr" : {"placeholder": "Prix au kg"}}) }}</div>
+            <div>{{ form_row(form.calorie, {"attr" : {"placeholder": "Nombre de calories/100g"}}) }}</div>
+            <div>{{ form_row(form.proteine, {"attr" : {"placeholder": "Nombre de protéïnes/100g"}}) }}</div>
+            <div>{{ form_row(form.glucide, {"attr" : {"placeholder": "Nombre de glucides/100g"}}) }}</div>
+            <div>{{ form_row(form.lipide, {"attr" : {"placeholder": "Nombre de lipides/100g"}}) }}</div>
+
+        </div>
+    </div>
+    <input type="submit" class="btn btn-primary" value="Ajouter">
+    {{form_end(form)}}
+
+{% endblock %}

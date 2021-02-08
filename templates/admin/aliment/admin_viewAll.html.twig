@@ -1,0 +1,49 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Admin{% endblock %}
+
+{% block monTitre %}Administration{% endblock %}
+{% block body %}
+
+{% for message in app.flashes('success') %}
+    <div class="alert alert-success">
+        {{message}}
+    </div>
+{% endfor %}
+
+<a class="btn btn-success btn-command" href="{{path('admin_aliment_add')}}">Ajouter</a>
+<table class="table">
+    <tr class="table-primary">
+        <td class="td_head">Image</td>
+        <td class="td_head">Aliment</td>
+        <td class="td_head">Type</td>
+        <td class="td_head">Prix</td>
+        <td class="td_head">Calories</td>
+        <td class="td_head">Protéines</td>
+        <td class="td_head">Glucides</td>
+        <td class="td_head">Lipides</td>
+        <td class="td_head">Actions</td>
+    </tr>
+    {% for aliment in aliments %}
+        <tr>
+            <td class="td_image"><img src="{{ asset('images/aliments/' ~ aliment.image) }}" alt="" class="perso_imgAlimentAdmin"></td>
+            <td><strong>{{aliment.nom}}</strong></td>
+            <td><strong>{{aliment.type.libelle}}</strong></td>
+            <td class="td_value">{{aliment.prix}}</td>
+            <td class="td_value">{{aliment.calorie}}</td>
+            <td class="td_value">{{aliment.proteine}}</td>
+            <td class="td_value">{{aliment.glucide}}</td>
+            <td class="td_value">{{aliment.lipide}}</td>
+            <td class="td_button">
+                <a class="btn btn-secondary" href="{{path('admin_aliment_update',{'id' : aliment.id})}}">Modifier</a>
+                <form method="POST" style="display:inline-block" action="{{path('admin_aliment_delete', {'id' : aliment.id})}}" onsubmit="return confirm('Confirmer la suppression ?')">
+                    <input type="hidden" name="_method" value="delete">
+                    <input type="hidden" name="_token" value="{{csrf_token('supprimer' ~ aliment.id)}}">
+                    <input type="submit" class="btn btn-danger" value="supprimer" >
+                </form>
+            </td>
+        </tr>
+    {% endfor %}
+</table>
+
+{% endblock %}

@@ -1,0 +1,52 @@
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    font-size: 16px;
+    margin: 10px;
+}
+
+body {
+    margin: 0;
+    line-height: 1.4;
+    /*letter-spacing: 0.2;*/
+    font-family: "Source Sans Pro", sans-serif;
+}
+
+.perso_imgAliment{
+    width: auto;
+    height: 100px;
+    object-fit: cover;
+}
+
+.td_head, .td_image, .td_button, .td_value {
+    text-align: center;
+}
+
+.td_button>* {
+    margin: 2px;
+}
+
+.td_head {
+    border-right: white solid 1px;
+}
+
+.table td {
+    vertical-align: middle;
+}
+
+.perso_imgAlimentAdmin{
+    width: auto;
+    height: 60px;
+    object-fit: cover;
+}
+
+.btn-command {
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+a.nav-welcome {
+    font-size: xx-large;
+}

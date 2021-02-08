@@ -1,0 +1,24 @@
+{% extends 'base.html.twig' %}
+
+{% form_theme form 'bootstrap_4_layout.html.twig' %}
+
+{% block title %}Type {{ type.libelle }}{% endblock %}
+
+{% block monTitre %}
+    {% if isModification %}
+        Modification du type {{ type.libelle }}
+    {% else %}
+        Ajout d'un type d'aliment
+    {% endif %}
+{% endblock %}
+
+{% block body %}
+{{ form_start(form) }}
+
+    <div>{{ form_row(form.libelle, {"attr" : { "placeholder": "Nom du type d'aliment" }}) }}</div>
+    <div>{{ form_row(form.imageFile, {"attr" : { "placeholder": "Image du type d'aliment" }}) }}</div>
+
+    <input type="submit" value="Valider" class="btn btn-primary">
+{{ form_end(form) }}
+{% endblock %}
+
